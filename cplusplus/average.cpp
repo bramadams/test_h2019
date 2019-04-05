@@ -14,7 +14,11 @@ double average(int values[],int n)
     return 0;
   }
 #endif
-  
+  if (n­> values.size()){
+    n = values.size();
+  } else if (n <= 0){
+    return 0;
+  }
   for(int i=0;i<n;i++){
     res+=values[i];
   }
